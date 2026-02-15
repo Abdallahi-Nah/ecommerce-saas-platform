@@ -1,0 +1,1268 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search...",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close",
+    "welcome": "Welcome"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Get Started",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Build Your Online Store",
+    "subtitle": "Create a beautiful, professional e-commerce store in minutes",
+    "cta": "Start Free Trial",
+    "secondaryCta": "Watch Demo"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Sign Up",
+    "registerStore": "Create Your Store",
+    "email": "Email Address",
+    "password": "Password",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "storeName": "Store Name",
+    "storeDescription": "Store Description",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loginSuccess": "Login successful!",
+    "registerSuccess": "Registration successful!",
+    "storeCreated": "Store created successfully!"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "passwordMin": "Password must be at least 6 characters",
+    "serverError": "Server error, please try again"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "overview": "Here's an overview of your store today",
+    "stats": {
+      "totalProducts": "Total Products",
+      "orders": "Orders",
+      "revenue": "Revenue",
+      "customers": "Customers"
+    },
+    "quickActions": "Quick Actions",
+    "addProduct": "Add Product",
+    "viewOrders": "View Orders",
+    "lowStockAlert": "Low Stock Alert",
+    "lowStockMessage": "You have {count} products with low stock",
+    "viewProducts": "View Products",
+    "recentProducts": "Recent Products",
+    "viewAll": "View All",
+    "noProducts": "No products yet",
+    "addFirstProduct": "Start by adding your first product",
+    "product": "Product",
+    "price": "Price",
+    "stock": "Stock",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "products": {
+    "title": "Products",
+    "manage": "Manage your store products",
+    "addProduct": "Add Product",
+    "search": "Search for a product...",
+    "allProducts": "All Products",
+    "active": "Active",
+    "draft": "Draft",
+    "archived": "Archived",
+    "noProducts": "No products",
+    "noResults": "No results found",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "deleteConfirm": "Are you sure you want to delete this product?",
+    "deleteSuccess": "Product deleted successfully",
+    "statusUpdated": "Product status updated",
+    "uncategorized": "Uncategorized"
+  },
+  "addProduct": {
+    "backToProducts": "Back to Products",
+    "title": "Add New Product",
+    "subtitle": "Add a new product to your store",
+
+    "basicInfo": "Basic Information",
+    "productName": "Product Name",
+    "productNamePlaceholder": "Example: iPhone 15 Pro Max",
+    "description": "Product Description",
+    "descriptionPlaceholder": "Write a detailed description of the product...",
+    "category": "Category",
+    "categoryPlaceholder": "Example: Electronics, Clothing, Shoes",
+    "tags": "Tags (separate with commas)",
+    "tagsPlaceholder": "Example: phone, iPhone, Apple",
+    "tagsHint": "Use a comma (,) to separate tags",
+
+    "pricing": "Pricing",
+    "price": "Price *",
+    "compareAtPrice": "Compare at Price",
+    "cost": "Cost",
+    "currency": "SAR",
+    "internalOnly": "For internal purposes only",
+
+    "images": "Product Images",
+    "addAnotherImage": "Add Another Image",
+    "imagesHint": "💡 Tip: Use image URLs from sites like Imgur or ImgBB",
+
+    "status": "Status",
+    "active": "Active",
+    "activeDescription": "Product is visible to customers",
+    "draft": "Draft",
+    "draftDescription": "Product is hidden from customers",
+
+    "inventory": "Inventory",
+    "availableQuantity": "Available Quantity *",
+    "trackInventory": "Track Inventory",
+
+    "saveProduct": "Save Product",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+
+    "successMessage": "Product added successfully! 🎉",
+    "priceValidation": "Price must be greater than zero"
+  },
+  "editProduct": {
+    "title": "Edit Product",
+    "subtitle": "Update product information",
+    "backToProducts": "Back to Products",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+
+    "sections": {
+      "basicInfo": "Basic Information",
+      "pricing": "Pricing",
+      "images": "Product Images",
+      "status": "Status",
+      "inventory": "Inventory"
+    },
+
+    "fields": {
+      "name": "Product Name",
+      "namePlaceholder": "e.g., iPhone 15 Pro Max",
+      "description": "Product Description",
+      "descriptionPlaceholder": "Write a detailed description of the product...",
+      "category": "Category",
+      "categoryPlaceholder": "e.g., Electronics, Clothing, Shoes",
+      "tags": "Keywords (separate with comma)",
+      "tagsPlaceholder": "e.g., phone, iPhone, Apple",
+      "tagsHelp": "Use comma (,) to separate words",
+
+      "price": "Price",
+      "pricePlaceholder": "0.00",
+      "compareAtPrice": "Compare at Price",
+      "cost": "Cost",
+      "costHelp": "For internal purposes only",
+      "currency": "$",
+
+      "imageUrl": "Image URL",
+      "imageUrlPlaceholder": "https://example.com/image.jpg",
+      "addImage": "Add Another Image",
+
+      "stock": "Available Quantity",
+      "stockPlaceholder": "0",
+      "trackInventory": "Track Inventory"
+    },
+
+    "status": {
+      "active": "Active",
+      "activeDesc": "Product is visible to customers",
+      "draft": "Draft",
+      "draftDesc": "Product is hidden from customers"
+    },
+
+    "required": "*",
+
+    "messages": {
+      "fetchError": "Failed to load product data",
+      "requiredFields": "Please fill in all required fields",
+      "invalidPrice": "Price must be greater than zero",
+      "updateSuccess": "Product updated successfully! 🎉",
+      "updateError": "Failed to update product"
+    }
+  },
+  "orders": {
+    "title": "Orders",
+    "subtitle": "Manage your store orders",
+    "count": "({count})",
+
+    "search": {
+      "placeholder": "Search by order number or customer name..."
+    },
+
+    "filters": {
+      "all": "All Orders",
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+
+    "details": {
+      "orderNumber": "Order Number",
+      "customer": "Customer",
+      "total": "Total",
+      "products": "product",
+      "products_plural": "products",
+      "date": "Date",
+      "currency": "$"
+    },
+
+    "actions": {
+      "view": "View Details",
+      "viewTooltip": "View order details"
+    },
+
+    "empty": {
+      "title": "No Orders",
+      "noResults": "No results found",
+      "noOrders": "No orders received yet"
+    }
+  },
+  "orderDetails": {
+    "title": "Order",
+    "backToOrders": "Back to Orders",
+
+    "sections": {
+      "products": "Products",
+      "customerInfo": "Customer Information",
+      "shippingAddress": "Shipping Address",
+      "updateStatus": "Update Status",
+      "orderInfo": "Order Information"
+    },
+
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+
+    "products": {
+      "count": "({count})",
+      "quantity": "Quantity",
+      "price": "Price",
+      "total": "Total"
+    },
+
+    "summary": {
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "total": "Total",
+      "currency": "$"
+    },
+
+    "customer": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone"
+    },
+
+    "shipping": {
+      "fullName": "Full Name",
+      "phone": "Phone",
+      "address": "Address",
+      "city": "City",
+      "state": "State",
+      "country": "Country",
+      "zipCode": "Zip Code"
+    },
+
+    "info": {
+      "orderDate": "Order Date",
+      "paymentMethod": "Payment Method",
+      "customerNotes": "Customer Notes"
+    },
+
+    "paymentMethods": {
+      "cash": "Cash",
+      "card": "Card",
+      "bank_transfer": "Bank Transfer"
+    },
+
+    "actions": {
+      "updateTo": "Update to",
+      "confirmUpdate": "Are you sure you want to change the status to"
+    },
+
+    "messages": {
+      "updateSuccess": "Order status updated successfully",
+      "updateError": "Failed to update order status",
+      "fetchError": "Failed to load order data"
+    }
+  },
+  "customers": {
+    "title": "Customers",
+    "subtitle": "Manage and track your store customers",
+
+    "stats": {
+      "totalCustomers": "Total Customers",
+      "totalRevenue": "Total Revenue",
+      "avgCustomerValue": "Avg Customer Value",
+      "totalOrders": "Total Orders",
+      "currency": "$"
+    },
+
+    "search": {
+      "placeholder": "Search by name, email or phone..."
+    },
+
+    "sort": {
+      "totalSpent": "Highest Spending",
+      "totalOrders": "Most Orders",
+      "recent": "Most Recent"
+    },
+
+    "table": {
+      "customer": "Customer",
+      "contactInfo": "Contact Info",
+      "orders": "Orders",
+      "totalSpent": "Total Spent",
+      "lastOrder": "Last Order",
+      "joined": "Joined"
+    },
+
+    "mobile": {
+      "orders": "Orders",
+      "spent": "Spent",
+      "lastOrder": "Last Order"
+    },
+
+    "empty": {
+      "title": "No Customers",
+      "noResults": "No results found",
+      "noCustomers": "No customers have made a purchase yet"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your store and account settings",
+
+    "tabs": {
+      "store": "Store Information",
+      "profile": "Profile",
+      "security": "Security"
+    },
+
+    "store": {
+      "title": "Store Information",
+      "name": "Store Name",
+      "description": "Store Description",
+      "email": "Email",
+      "phone": "Phone",
+      "logo": "Logo URL",
+      "logoPlaceholder": "https://example.com/logo.png",
+      "currency": "Currency",
+      "language": "Default Language",
+
+      "currencies": {
+        "SAR": "Saudi Riyal (SAR)",
+        "USD": "US Dollar (USD)",
+        "EUR": "Euro (EUR)",
+        "AED": "UAE Dirham (AED)"
+      },
+
+      "languages": {
+        "ar": "العربية",
+        "en": "English",
+        "fr": "Français"
+      }
+    },
+
+    "profile": {
+      "title": "Profile",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone"
+    },
+
+    "security": {
+      "title": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "passwordHint": "Must be at least 6 characters",
+      "changePassword": "Change Password"
+    },
+
+    "actions": {
+      "save": "Save Changes",
+      "saving": "Saving..."
+    },
+
+    "messages": {
+      "storeUpdateSuccess": "Store information updated successfully",
+      "profileUpdateSuccess": "Profile updated successfully",
+      "passwordChangeSuccess": "Password changed successfully",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "updateError": "An error occurred while updating"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Build Your Online Store",
+      "subtitle": "In Minutes",
+      "description": "Complete platform to create and manage your online store easily. Start for free and scale your business!",
+      "cta": "Start Free",
+      "secondaryCta": "Watch Demo",
+      "trustedBy": "Trusted by 5,000+ stores"
+    },
+    "features": {
+      "title": "Everything You Need for Success",
+      "subtitle": "Powerful yet easy-to-use features",
+      "feature1": {
+        "title": "Easy Product Management",
+        "description": "Add and edit products easily with advanced inventory and pricing management"
+      },
+      "feature2": {
+        "title": "Complete Order System",
+        "description": "Track and manage orders from start to delivery with ease"
+      },
+      "feature3": {
+        "title": "Reports & Analytics",
+        "description": "Get clear insights about your sales, customers and store growth"
+      },
+      "feature4": {
+        "title": "Multi-language Support",
+        "description": "Your store supports Arabic, English, and French with full RTL"
+      },
+      "feature5": {
+        "title": "Responsive Design",
+        "description": "Your store works perfectly on all devices - mobile, tablet, desktop"
+      },
+      "feature6": {
+        "title": "High Security",
+        "description": "Your data is protected with highest security and encryption standards"
+      }
+    },
+    "pricing": {
+      "title": "Plans That Fit Your Needs",
+      "subtitle": "Start free and grow as you scale",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save 20%",
+      "free": {
+        "name": "Free",
+        "price": "0",
+        "description": "Perfect to start",
+        "features": [
+          "Up to 10 products",
+          "100 orders/month",
+          "Email support",
+          "Basic dashboard",
+          "Monthly reports"
+        ],
+        "cta": "Start Free"
+      },
+      "basic": {
+        "name": "Basic",
+        "price": "99",
+        "description": "For growing stores",
+        "features": [
+          "Up to 100 products",
+          "1000 orders/month",
+          "24/7 support",
+          "Advanced dashboard",
+          "Daily reports",
+          "Custom domain",
+          "Shipping integration"
+        ],
+        "cta": "Subscribe Now",
+        "popular": "Most Popular"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299",
+        "description": "For large stores",
+        "features": [
+          "Unlimited products",
+          "Unlimited orders",
+          "VIP support",
+          "Advanced analytics",
+          "Full API",
+          "Advanced integrations",
+          "Dedicated support team",
+          "Free training"
+        ],
+        "cta": "Subscribe Now"
+      },
+      "currency": "SAR/month"
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "subtitle": "Reviews from successful entrepreneurs",
+      "testimonial1": {
+        "text": "StorePro completely changed how I manage my store. Now I can focus on growth instead of worrying about technology.",
+        "author": "Ahmed Al-Saeed",
+        "role": "Founder of Electronics Store"
+      },
+      "testimonial2": {
+        "text": "The best e-commerce platform I've used. Easy interface and excellent support!",
+        "author": "Fatima Mohammed",
+        "role": "Fashion Store Owner"
+      },
+      "testimonial3": {
+        "text": "My sales increased 300% in 6 months thanks to the powerful tools and accurate reports.",
+        "author": "Khaled Al-Otaibi",
+        "role": "Sports Store Manager"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the most common questions",
+      "q1": {
+        "question": "Can I start for free?",
+        "answer": "Yes! We offer a free plan that allows up to 10 products and 100 orders per month. You can upgrade anytime."
+      },
+      "q2": {
+        "question": "Can I change plans later?",
+        "answer": "Absolutely! You can upgrade or downgrade anytime. The difference will be calculated automatically."
+      },
+      "q3": {
+        "question": "Is my data protected?",
+        "answer": "Yes, we use the highest security and encryption standards to protect your data and your customers' data."
+      },
+      "q4": {
+        "question": "Is there technical support?",
+        "answer": "Yes, we provide email support for everyone, and 24/7 support for paid plans."
+      },
+      "q5": {
+        "question": "Can I use my own domain?",
+        "answer": "Yes, on paid plans you can connect your custom domain to your store."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Store?",
+      "subtitle": "Join thousands of successful merchants today",
+      "button": "Start Now For Free"
+    },
+    "footer": {
+      "description": "Complete platform to create and manage your online stores easily",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "about": "About",
+      "company": "Company",
+      "aboutUs": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "support": "Support",
+      "helpCenter": "Help Center",
+      "documentation": "Documentation",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "rights": "All rights reserved"
+    }
+  },
+  "storefront": {
+    "backToStore": "Back to Store",
+    "bankTransfer": "Bank Transfer",
+    "orderNumber": "Order #",
+    "orderedOn": "Ordered on",
+    "orderProgress": "Order Status",
+
+    "trackingSteps": {
+      "received": "Received",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+
+    "orderStatus": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+
+    "thankYouTitle": "Thank you for your order! 🎉",
+    "thankYouMessage": "We will process your order...",
+
+    "messages.orderNotFound": "Order not found",
+    "store": "Store",
+    "allCategories": "All Categories",
+    "clearFilters": "Clear Filters",
+    "noProducts": "No Products",
+    "noProductsWithFilters": "No products match the filters",
+    "noProductsYet": "No products have been added yet",
+    "backToCart": "Back to Cart",
+    "checkoutTitle": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "paymentMethod": "Payment Method",
+    "notes": "Notes",
+    "notesOptional": "Notes (optional)",
+    "notesPlaceholder": "Any special notes about the order...",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "address": "Address",
+    "addressPlaceholder": "Building number, street, neighborhood",
+    "city": "City",
+    "state": "State",
+    "country": "Country",
+    "zipCode": "Zip Code",
+    "required": "*",
+    "cashOnDelivery": "Cash on Delivery",
+    "cashOnDeliveryDesc": "Pay cash upon receipt",
+    "creditCard": "Credit Card",
+    "comingSoon": "Coming soon...",
+    "confirmOrder": "Confirm Order",
+    "processingOrder": "Processing order...",
+    "messages": {
+      "storeNotFound": "Store not found",
+      "productNotFound": "Product not found",
+      "productUnavailable": "Product unavailable",
+      "availableStock": "Available stock: {{stock}}",
+      "fillRequired": "Please fill in all required fields",
+      "loginRequired": "You must log in first",
+      "orderSuccess": "Order created successfully! 🎉",
+      "orderError": "Failed to create order"
+    },
+    "orderSummary": "Order Summary",
+    "freeShipping": "Free",
+    "clearCart": "Clear Cart",
+    "emptyCartDescription": "You haven't added any products to the cart yet",
+    "confirmRemove": "Are you sure you want to remove this product?",
+    "confirmClearCart": "Do you want to clear the cart?",
+    "cartCleared": "Cart cleared",
+    "poweredBy": "Powered By",
+    "rights": "All rights reserved",
+    "soldBy": "Sold By",
+    "pieces": "Pieces",
+    "status": "Status",
+    "backToProducts": "Back to Products",
+    "discount": "Discount",
+    "products": "Products",
+    "allProducts": "All Products",
+    "search": "Search for a product...",
+    "filter": "Filter",
+    "sort": "Sort",
+    "priceRange": "Price Range",
+    "min": "Min",
+    "max": "Max",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "viewDetails": "View Details",
+    "relatedProducts": "Related Products",
+    "description": "Description",
+    "specifications": "Specifications",
+    "cart": "Cart",
+    "emptyCart": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "checkout": "Checkout",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "price": "Price"
+  },
+  "imageUpload": {
+    "logoFileFormats": "PNG, JPG (less than 2MB)",
+    "uploadLogo": "Upload Logo",
+    "storeLogo": "Store Logo",
+    "title": "Product Images",
+    "maxImagesError": "You can upload a maximum of {{max}} images",
+    "fileSizeError": "Image size must be less than 5 MB",
+    "uploadSuccess": "{{count}} image(s) uploaded successfully!",
+    "deleteError": "Failed to delete image",
+    "deleteSuccess": "Image deleted",
+    "uploading": "Uploading...",
+    "clickToUpload": "Click to upload images or drag them here",
+    "fileFormats": "PNG, JPG, WEBP (up to {{max}} images, 5MB per image)",
+    "imageAlt": "Image {{number}}",
+    "primaryBadge": "Primary",
+    "setPrimaryTitle": "Set as primary",
+    "deleteTitle": "Delete",
+    "infoText": "💡 The first image will be the main product image. You can change it by clicking on the image."
+  },
+  "subscriptionPlans": {
+    "title": "Subscription Plans",
+    "subtitle": "Choose the plan that fits your needs",
+
+    "plans": {
+      "free": {
+        "name": "Free",
+        "features": {
+          "products": "Up to 10 products",
+          "orders": "100 orders per month",
+          "support": "Email support",
+          "dashboard": "Basic dashboard",
+          "reports": "Monthly reports"
+        }
+      },
+      "basic": {
+        "name": "Basic",
+        "popular": "Most Popular",
+        "features": {
+          "products": "Up to 100 products",
+          "orders": "1000 orders per month",
+          "support": "24/7 support",
+          "dashboard": "Advanced dashboard",
+          "reports": "Daily reports",
+          "domain": "Custom domain",
+          "shipping": "Shipping integration"
+        }
+      },
+      "pro": {
+        "name": "Professional",
+        "features": {
+          "products": "Unlimited products",
+          "orders": "Unlimited orders",
+          "support": "VIP support",
+          "analytics": "Advanced analytics",
+          "api": "Full API",
+          "integration": "Advanced integration",
+          "team": "Dedicated support team",
+          "training": "Free training"
+        }
+      }
+    },
+
+    "pricing": {
+      "perMonth": "SAR/month"
+    },
+
+    "currentPlan": {
+      "title": "Current Plan",
+      "expiresOn": "Expires on",
+      "willBeCancelled": "(Will be cancelled)",
+      "badge": "Your current plan"
+    },
+
+    "buttons": {
+      "upgrade": "Upgrade to",
+      "cancel": "Cancel Subscription",
+      "resume": "Resume Subscription",
+      "processing": "Processing...",
+      "currentPlan": "Current Plan",
+      "notAvailable": "Not Available"
+    },
+
+    "confirmations": {
+      "cancelSubscription": "Are you sure you want to cancel your subscription?"
+    },
+
+    "messages": {
+      "popupBlocked": "Please allow pop-up windows to complete the payment process",
+      "checkoutOpened": "Payment page opened in a new window"
+    },
+
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "cancel": {
+          "question": "Can I cancel my subscription at any time?",
+          "answer": "Yes, you can cancel your subscription at any time. It will remain active until the end of the paid period."
+        },
+        "change": {
+          "question": "Can I upgrade or downgrade?",
+          "answer": "Yes, you can change your plan at any time. The difference will be calculated automatically."
+        },
+        "payment": {
+          "question": "What payment methods are available?",
+          "answer": "We accept all major credit and debit cards (Visa, Mastercard)."
+        },
+        "security": {
+          "question": "Is my data secure?",
+          "answer": "Yes, we use Stripe to process payments with the highest security standards."
+        }
+      }
+    }
+  },
+  "subscriptionSuccess": {
+    "loading": {
+      "title": "Verifying subscription...",
+      "subtitle": "Please wait a moment"
+    },
+    "success": {
+      "titleVerified": "Subscription Successful! 🎉",
+      "titlePending": "Thank you!",
+      "messageVerified": "All plan features have been activated on your account.",
+      "messagePending": "The subscription will be activated shortly.",
+      "redirectMessage": "You will be redirected to the dashboard in a moment...",
+      "dashboardButton": "Go to Dashboard"
+    }
+  },
+  "subscriptionCancel": {
+    "title": "Operation Cancelled",
+    "message": "The subscription process was not completed. No amount has been charged to your account.",
+    "buttons": {
+      "retry": "Try Again",
+      "dashboard": "Back to Dashboard"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "hero": {
+      "title": "Helping You Build Your Online Store",
+      "subtitle": "A comprehensive platform to create and manage your e-commerce stores easily and professionally",
+      "description": "StorePro is an advanced SaaS platform that empowers entrepreneurs to launch their online stores in minutes, with powerful tools for managing products, orders, and customers."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe everyone deserves a chance to build their own business online. Our mission is to empower entrepreneurs and merchants to create professional online stores without complex technical expertise."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "We aim to become the leading platform in the Arab region for building online stores, empowering one million entrepreneurs to achieve their business dreams by 2030."
+    },
+    "values": {
+      "title": "Our Values",
+      "value1": {
+        "title": "Simplicity",
+        "description": "We make complex technology simple and easy for everyone"
+      },
+      "value2": {
+        "title": "Innovation",
+        "description": "We innovate new solutions to meet changing market needs"
+      },
+      "value3": {
+        "title": "Quality",
+        "description": "We commit to delivering the highest quality in everything we offer"
+      },
+      "value4": {
+        "title": "Support",
+        "description": "We provide continuous support to ensure our customers' success"
+      }
+    },
+    "stats": {
+      "stores": "Active Stores",
+      "orders": "Monthly Orders",
+      "revenue": "Billion SAR Transactions",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "A group of experts passionate about your success"
+    },
+    "journey": {
+      "title": "Our Journey",
+      "2023": {
+        "title": "The Beginning",
+        "description": "StorePro founded to simplify e-commerce"
+      },
+      "2024": {
+        "title": "Growth",
+        "description": "Reached 1000 active stores and launched new features"
+      },
+      "2025": {
+        "title": "Expansion",
+        "description": "Opening new offices and expanding the team"
+      },
+      "2026": {
+        "title": "The Future",
+        "description": "Continuing innovation to serve our customers better"
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "description": "Join thousands of successful merchants who trust StorePro",
+      "button": "Start Now For Free"
+    }
+  },
+  "registerChoice": {
+    "header": {
+      "title": "Choose Account Type",
+      "subtitle": "Do you want to shop or create your own store?"
+    },
+    "options": {
+      "customer": {
+        "title": "Register as a Customer",
+        "subtitle": "To shop from available stores",
+        "features": {
+          "browse": "Browse products from all stores",
+          "cart": "Add products to cart",
+          "purchase": "Complete purchases",
+          "track": "Track your orders",
+          "addresses": "Save favorite addresses"
+        }
+      },
+      "store": {
+        "title": "Register as a Store Owner",
+        "subtitle": "To create and manage your online store",
+        "features": {
+          "create": "Create your own store",
+          "manage": "Manage products and orders",
+          "dashboard": "Advanced dashboard",
+          "reports": "Reports and statistics",
+          "support": "Continuous technical support"
+        }
+      }
+    },
+    "badges": {
+      "popular": "Most Popular"
+    },
+    "buttons": {
+      "choose": "Choose This Type"
+    },
+    "footer": {
+      "haveAccount": "Already have an account?",
+      "login": "Login"
+    }
+  },
+  "registerCustomer": {
+    "pageTitle": "Customer Registration",
+    "backToChoice": "Back to Account Type Selection",
+
+    "sections": {
+      "personalInfo": "Personal Information"
+    },
+
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone Number (optional)",
+        "placeholder": "501234567"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      },
+      "confirmPassword": {
+        "label": "Confirm Password",
+        "placeholder": "Confirm your password"
+      }
+    },
+
+    "buttons": {
+      "register": "Register",
+      "loading": "Registering..."
+    },
+
+    "terms": {
+      "text": "By registering, I agree to the",
+      "termsOfUse": "Terms of Use",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy"
+    },
+
+    "sidebar": {
+      "title": "Shop from the Best Stores",
+      "description": "Discover thousands of products from trusted stores and enjoy a smooth and secure shopping experience",
+      "features": {
+        "browse": "Browse thousands of products",
+        "payment": "Secure and guaranteed payment",
+        "shipping": "Fast shipping",
+        "support": "Outstanding customer service"
+      }
+    },
+
+    "validation": {
+      "allFieldsRequired": "Please fill in all required fields",
+      "passwordMismatch": "Passwords do not match",
+      "passwordMinLength": "Password must be at least 6 characters"
+    },
+
+    "messages": {
+      "success": "Registration successful! 🎉",
+      "error": "Registration failed"
+    }
+  },
+  "registerStore": {
+    "pageTitle": "Store Owner Registration",
+    "backToChoice": "Back to Account Type Selection",
+
+    "sections": {
+      "personalInfo": "Personal Information",
+      "storeInfo": "Store Information"
+    },
+
+    "personalForm": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "501234567"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      }
+    },
+
+    "storeForm": {
+      "name": {
+        "label": "Store Name",
+        "placeholder": "Enter store name"
+      },
+      "description": {
+        "label": "Store Description",
+        "placeholder": "Write a brief description of your store"
+      },
+      "email": {
+        "label": "Store Email (optional)",
+        "placeholder": "Store email (leave empty to use yours)"
+      },
+      "phone": {
+        "label": "Store Phone (optional)",
+        "placeholder": "Store number (leave empty to use yours)"
+      }
+    },
+
+    "buttons": {
+      "register": "Register",
+      "loading": "Registering..."
+    },
+
+    "terms": {
+      "text": "By registering, I agree to the",
+      "termsOfUse": "Terms of Use",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy"
+    },
+
+    "sidebar": {
+      "title": "Everything You Need to Grow Your Business",
+      "description": "Register now and start your store with more than 68,000 stores benefiting from hundreds of logistical services and marketing tools.",
+      "features": {
+        "products": "Product Management",
+        "orders": "Order System",
+        "reports": "Detailed Reports",
+        "support": "24/7 Technical Support"
+      }
+    },
+
+    "loginTab": {
+      "comingSoon": "Coming soon... login page"
+    }
+  },
+  "login": {
+    "pageTitle": "Login",
+
+    "welcome": {
+      "title": "Welcome Back! 👋",
+      "subtitle": "Log in to access your dashboard"
+    },
+
+    "form": {
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      },
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?"
+    },
+
+    "buttons": {
+      "login": "Log In",
+      "loading": "Logging in...",
+      "customerLogin": "Customer Login"
+    },
+
+    "register": {
+      "text": "Don't have an account?",
+      "link": "Create your store now"
+    },
+
+    "divider": {
+      "or": "Or"
+    },
+
+    "sidebar": {
+      "title": "Start Your E-commerce Journey",
+      "description": "More than 68,000 stores trust us to manage and grow their businesses. Join them today and start your journey to success.",
+      "stats": {
+        "stores": {
+          "number": "68K+",
+          "label": "Active stores"
+        },
+        "uptime": {
+          "number": "99.9%",
+          "label": "Uptime"
+        },
+        "support": {
+          "number": "24/7",
+          "label": "Technical support"
+        },
+        "features": {
+          "number": "50+",
+          "label": "Features"
+        }
+      }
+    }
+  },
+  "customerShop": {
+    "navbar": {
+      "logo": "StorePro",
+      "cart": "Cart",
+      "user": {
+        "profile": "Profile",
+        "logout": "Logout"
+      }
+    },
+
+    "search": {
+      "placeholder": "Search for a product...",
+      "storeFilter": "All stores"
+    },
+
+    "product": {
+      "outOfStock": "Out of Stock",
+      "price": "SAR",
+      "addToCart": "Add to Cart"
+    },
+
+    "emptyState": {
+      "noProducts": "No products",
+      "noResults": "No matching products found",
+      "noAvailable": "No products currently available"
+    },
+
+    "messages": {
+      "outOfStock": "Product not available",
+      "cartEmpty": "Cart is empty",
+      "fetchError": "Failed to load data",
+      "logoutSuccess": "Logged out successfully",
+      "addedToCart": "Product added to cart"
+    }
+  },
+  "myOrders": {
+    "pageTitle": "My Orders",
+    "pageSubtitle": "Track and manage all your orders",
+
+    "navbar": {
+      "logo": "StorePro",
+      "cart": "Cart",
+      "user": {
+        "myOrders": "My orders",
+        "logout": "Logout"
+      }
+    },
+
+    "filters": {
+      "searchPlaceholder": "Search by order number or store name...",
+      "statusFilter": {
+        "all": "All statuses",
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "processing": "Processing",
+        "shipped": "Shipped",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+      }
+    },
+
+    "orderCard": {
+      "orderNumber": "Order No.",
+      "items": "item",
+      "price": "SAR"
+    },
+
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+
+    "emptyState": {
+      "noOrders": "No orders",
+      "noResults": "No matching orders found",
+      "noOrdersYet": "You haven't placed any orders yet",
+      "startShopping": "Start Shopping"
+    },
+
+    "messages": {
+      "logoutSuccess": "Logged out successfully",
+      "fetchError": "Failed to load orders"
+    }
+  },
+  "customerShopLayout": {
+    "search": {
+      "placeholder": "Search for a product...",
+      "storeFilter": "All stores"
+    },
+
+    "product": {
+      "outOfStock": "Out of Stock",
+      "price": "SAR",
+      "addToCart": "Add to Cart"
+    },
+
+    "emptyState": {
+      "noProducts": "No products",
+      "noResults": "No matching products found",
+      "noAvailable": "No products currently available"
+    },
+
+    "messages": {
+      "outOfStock": "Product not available",
+      "fetchError": "Failed to load data",
+      "addedToCart": "Product added to cart"
+    }
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "customers": "Customers",
+    "settings": "Settings",
+    "subscription": "Subscription",
+    "logout": "Logout"
+  }
+}

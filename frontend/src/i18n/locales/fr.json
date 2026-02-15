@@ -1,0 +1,1268 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "search": "Rechercher...",
+    "filter": "Filtrer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "close": "Fermer",
+    "welcome": "Bienvenue"
+  },
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "Commencer",
+    "dashboard": "Tableau de bord",
+    "logout": "Déconnexion"
+  },
+  "hero": {
+    "title": "Créez Votre Boutique en Ligne",
+    "subtitle": "Créez une belle boutique e-commerce professionnelle en quelques minutes",
+    "cta": "Essai Gratuit",
+    "secondaryCta": "Voir la Démo"
+  },
+  "auth": {
+    "login": "Se Connecter",
+    "register": "S'inscrire",
+    "registerStore": "Créer Votre Boutique",
+    "email": "Adresse E-mail",
+    "password": "Mot de Passe",
+    "name": "Nom Complet",
+    "phone": "Numéro de Téléphone",
+    "storeName": "Nom de la Boutique",
+    "storeDescription": "Description de la Boutique",
+    "forgotPassword": "Mot de passe oublié?",
+    "noAccount": "Vous n'avez pas de compte?",
+    "haveAccount": "Vous avez déjà un compte?",
+    "loginSuccess": "Connexion réussie!",
+    "registerSuccess": "Inscription réussie!",
+    "storeCreated": "Boutique créée avec succès!"
+  },
+  "errors": {
+    "required": "Ce champ est requis",
+    "invalidEmail": "Adresse e-mail invalide",
+    "passwordMin": "Le mot de passe doit contenir au moins 6 caractères",
+    "serverError": "Erreur serveur, veuillez réessayer"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue",
+    "overview": "Voici un aperçu de votre boutique aujourd'hui",
+    "stats": {
+      "totalProducts": "Total Produits",
+      "orders": "Commandes",
+      "revenue": "Revenu",
+      "customers": "Clients"
+    },
+    "quickActions": "Actions Rapides",
+    "addProduct": "Ajouter Produit",
+    "viewOrders": "Voir Commandes",
+    "lowStockAlert": "Alerte Stock Faible",
+    "lowStockMessage": "Vous avez {count} produits en rupture de stock",
+    "viewProducts": "Voir Produits",
+    "recentProducts": "Produits Récents",
+    "viewAll": "Voir Tout",
+    "noProducts": "Aucun produit",
+    "addFirstProduct": "Commencez par ajouter votre premier produit",
+    "product": "Produit",
+    "price": "Prix",
+    "stock": "Stock",
+    "status": "Statut",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "products": {
+    "title": "Produits",
+    "manage": "Gérer les produits de votre boutique",
+    "addProduct": "Ajouter Produit",
+    "search": "Rechercher un produit...",
+    "allProducts": "Tous les Produits",
+    "active": "Actif",
+    "draft": "Brouillon",
+    "archived": "Archivé",
+    "noProducts": "Aucun produit",
+    "noResults": "Aucun résultat",
+    "actions": "Actions",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce produit?",
+    "deleteSuccess": "Produit supprimé avec succès",
+    "statusUpdated": "Statut du produit mis à jour",
+    "uncategorized": "Non catégorisé"
+  },
+  "addProduct": {
+    "backToProducts": "Retour aux produits",
+    "title": "Ajouter un nouveau produit",
+    "subtitle": "Ajoutez un nouveau produit à votre boutique",
+
+    "basicInfo": "Informations de base",
+    "productName": "Nom du produit",
+    "productNamePlaceholder": "Exemple : iPhone 15 Pro Max",
+    "description": "Description du produit",
+    "descriptionPlaceholder": "Rédigez une description détaillée du produit...",
+    "category": "Catégorie",
+    "categoryPlaceholder": "Exemple : Électronique, Vêtements, Chaussures",
+    "tags": "Mots-clés (séparés par des virgules)",
+    "tagsPlaceholder": "Exemple : téléphone, iPhone, Apple",
+    "tagsHint": "Utilisez une virgule (,) pour séparer les mots-clés",
+
+    "pricing": "Tarification",
+    "price": "Prix *",
+    "compareAtPrice": "Prix avant réduction",
+    "cost": "Coût",
+    "currency": "SAR",
+    "internalOnly": "Pour usage interne uniquement",
+
+    "images": "Images du produit",
+    "addAnotherImage": "Ajouter une autre image",
+    "imagesHint": "💡 Astuce : utilisez des URLs d’images depuis des sites comme Imgur ou ImgBB",
+
+    "status": "Statut",
+    "active": "Actif",
+    "activeDescription": "Le produit est visible par les clients",
+    "draft": "Brouillon",
+    "draftDescription": "Le produit est caché aux clients",
+
+    "inventory": "Stock",
+    "availableQuantity": "Quantité disponible *",
+    "trackInventory": "Suivre le stock",
+
+    "saveProduct": "Enregistrer le produit",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+
+    "successMessage": "Produit ajouté avec succès ! 🎉",
+    "priceValidation": "Le prix doit être supérieur à zéro"
+  },
+  "editProduct": {
+    "title": "Modifier le produit",
+    "subtitle": "Mettez à jour les informations du produit",
+    "backToProducts": "Retour aux produits",
+    "loading": "Chargement...",
+    "saving": "Enregistrement...",
+    "saveChanges": "Enregistrer les modifications",
+    "cancel": "Annuler",
+
+    "sections": {
+      "basicInfo": "Informations de base",
+      "pricing": "Tarification",
+      "images": "Images du produit",
+      "status": "Statut",
+      "inventory": "Inventaire"
+    },
+
+    "fields": {
+      "name": "Nom du produit",
+      "namePlaceholder": "Ex: iPhone 15 Pro Max",
+      "description": "Description du produit",
+      "descriptionPlaceholder": "Écrivez une description détaillée du produit...",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Ex: Électronique, Vêtements, Chaussures",
+      "tags": "Mots-clés (séparez-les par une virgule)",
+      "tagsPlaceholder": "Ex: téléphone, iPhone, Apple",
+      "tagsHelp": "Utilisez la virgule (,) pour séparer les mots",
+
+      "price": "Prix",
+      "pricePlaceholder": "0.00",
+      "compareAtPrice": "Prix avant réduction",
+      "cost": "Coût",
+      "costHelp": "À usage interne uniquement",
+      "currency": "€",
+
+      "imageUrl": "URL de l'image",
+      "imageUrlPlaceholder": "https://example.com/image.jpg",
+      "addImage": "Ajouter une autre image",
+
+      "stock": "Quantité disponible",
+      "stockPlaceholder": "0",
+      "trackInventory": "Suivre l'inventaire"
+    },
+
+    "status": {
+      "active": "Actif",
+      "activeDesc": "Le produit est visible pour les clients",
+      "draft": "Brouillon",
+      "draftDesc": "Le produit est caché des clients"
+    },
+
+    "required": "*",
+
+    "messages": {
+      "fetchError": "Échec du chargement des données du produit",
+      "requiredFields": "Veuillez remplir tous les champs obligatoires",
+      "invalidPrice": "Le prix doit être supérieur à zéro",
+      "updateSuccess": "Produit mis à jour avec succès! 🎉",
+      "updateError": "Échec de la mise à jour du produit"
+    }
+  },
+  "orders": {
+    "title": "Commandes",
+    "subtitle": "Gérer les commandes de votre boutique",
+    "count": "({count})",
+
+    "search": {
+      "placeholder": "Rechercher par numéro de commande ou nom du client..."
+    },
+
+    "filters": {
+      "all": "Toutes les commandes",
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "processing": "En préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "processing": "En préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+
+    "details": {
+      "orderNumber": "N° de commande",
+      "customer": "Client",
+      "total": "Total",
+      "products": "produit",
+      "products_plural": "produits",
+      "date": "Date",
+      "currency": "€"
+    },
+
+    "actions": {
+      "view": "Voir les détails",
+      "viewTooltip": "Voir les détails de la commande"
+    },
+
+    "empty": {
+      "title": "Aucune commande",
+      "noResults": "Aucun résultat trouvé",
+      "noOrders": "Aucune commande reçue pour le moment"
+    }
+  },
+  "orderDetails": {
+    "title": "Commande",
+    "backToOrders": "Retour aux commandes",
+
+    "sections": {
+      "products": "Produits",
+      "customerInfo": "Informations client",
+      "shippingAddress": "Adresse de livraison",
+      "updateStatus": "Mettre à jour le statut",
+      "orderInfo": "Informations de la commande"
+    },
+
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "processing": "En préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+
+    "products": {
+      "count": "({count})",
+      "quantity": "Quantité",
+      "price": "Prix",
+      "total": "Total"
+    },
+
+    "summary": {
+      "subtotal": "Sous-total",
+      "shipping": "Livraison",
+      "tax": "Taxe",
+      "total": "Total",
+      "currency": "€"
+    },
+
+    "customer": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone"
+    },
+
+    "shipping": {
+      "fullName": "Nom complet",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "state": "Région",
+      "country": "Pays",
+      "zipCode": "Code postal"
+    },
+
+    "info": {
+      "orderDate": "Date de commande",
+      "paymentMethod": "Méthode de paiement",
+      "customerNotes": "Notes du client"
+    },
+
+    "paymentMethods": {
+      "cash": "Espèces",
+      "card": "Carte",
+      "bank_transfer": "Virement bancaire"
+    },
+
+    "actions": {
+      "updateTo": "Mettre à jour vers",
+      "confirmUpdate": "Êtes-vous sûr de vouloir changer le statut vers"
+    },
+
+    "messages": {
+      "updateSuccess": "Statut de la commande mis à jour avec succès",
+      "updateError": "Échec de la mise à jour du statut",
+      "fetchError": "Échec du chargement des données de la commande"
+    }
+  },
+  "customers": {
+    "title": "Clients",
+    "subtitle": "Gérer et suivre les clients de votre boutique",
+
+    "stats": {
+      "totalCustomers": "Total des clients",
+      "totalRevenue": "Revenu total",
+      "avgCustomerValue": "Valeur moyenne du client",
+      "totalOrders": "Total des commandes",
+      "currency": "€"
+    },
+
+    "search": {
+      "placeholder": "Rechercher par nom, email ou téléphone..."
+    },
+
+    "sort": {
+      "totalSpent": "Dépenses élevées",
+      "totalOrders": "Plus de commandes",
+      "recent": "Récents"
+    },
+
+    "table": {
+      "customer": "Client",
+      "contactInfo": "Coordonnées",
+      "orders": "Commandes",
+      "totalSpent": "Total dépensé",
+      "lastOrder": "Dernière commande",
+      "joined": "Inscrit"
+    },
+
+    "mobile": {
+      "orders": "Commandes",
+      "spent": "Dépensé",
+      "lastOrder": "Dernière cmd"
+    },
+
+    "empty": {
+      "title": "Aucun client",
+      "noResults": "Aucun résultat trouvé",
+      "noCustomers": "Aucun client n'a encore effectué d'achat"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Gérer les paramètres de votre boutique et compte",
+
+    "tabs": {
+      "store": "Informations de la boutique",
+      "profile": "Profil",
+      "security": "Sécurité"
+    },
+
+    "store": {
+      "title": "Informations de la boutique",
+      "name": "Nom de la boutique",
+      "description": "Description de la boutique",
+      "email": "Email",
+      "phone": "Téléphone",
+      "logo": "URL du logo",
+      "logoPlaceholder": "https://example.com/logo.png",
+      "currency": "Devise",
+      "language": "Langue par défaut",
+
+      "currencies": {
+        "SAR": "Riyal saoudien (SAR)",
+        "USD": "Dollar américain (USD)",
+        "EUR": "Euro (EUR)",
+        "AED": "Dirham émirati (AED)"
+      },
+
+      "languages": {
+        "ar": "العربية",
+        "en": "English",
+        "fr": "Français"
+      }
+    },
+
+    "profile": {
+      "title": "Profil",
+      "fullName": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone"
+    },
+
+    "security": {
+      "title": "Changer le mot de passe",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "passwordHint": "Doit contenir au moins 6 caractères",
+      "changePassword": "Changer le mot de passe"
+    },
+
+    "actions": {
+      "save": "Enregistrer les modifications",
+      "saving": "Enregistrement..."
+    },
+
+    "messages": {
+      "storeUpdateSuccess": "Informations de la boutique mises à jour avec succès",
+      "profileUpdateSuccess": "Profil mis à jour avec succès",
+      "passwordChangeSuccess": "Mot de passe changé avec succès",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+      "updateError": "Une erreur s'est produite lors de la mise à jour"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Créez Votre Boutique en Ligne",
+      "subtitle": "En Quelques Minutes",
+      "description": "Plateforme complète pour créer et gérer votre boutique en ligne facilement. Commencez gratuitement et développez votre entreprise!",
+      "cta": "Commencer Gratuitement",
+      "secondaryCta": "Voir la Démo",
+      "trustedBy": "Approuvé par plus de 5 000 boutiques"
+    },
+    "features": {
+      "title": "Tout Ce Dont Vous Avez Besoin Pour Réussir",
+      "subtitle": "Des fonctionnalités puissantes et faciles à utiliser",
+      "feature1": {
+        "title": "Gestion Facile des Produits",
+        "description": "Ajoutez et modifiez des produits facilement avec une gestion avancée de l'inventaire et des prix"
+      },
+      "feature2": {
+        "title": "Système de Commandes Complet",
+        "description": "Suivez et gérez les commandes du début à la livraison en toute simplicité"
+      },
+      "feature3": {
+        "title": "Rapports et Analyses",
+        "description": "Obtenez des informations claires sur vos ventes, clients et la croissance de votre boutique"
+      },
+      "feature4": {
+        "title": "Support Multilingue",
+        "description": "Votre boutique prend en charge l'arabe, l'anglais et le français avec RTL complet"
+      },
+      "feature5": {
+        "title": "Design Responsive",
+        "description": "Votre boutique fonctionne parfaitement sur tous les appareils - mobile, tablette, ordinateur"
+      },
+      "feature6": {
+        "title": "Haute Sécurité",
+        "description": "Vos données sont protégées avec les normes de sécurité et de cryptage les plus élevées"
+      }
+    },
+    "pricing": {
+      "title": "Des Forfaits Adaptés à Vos Besoins",
+      "subtitle": "Commencez gratuitement et évoluez à votre rythme",
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "save": "Économisez 20%",
+      "free": {
+        "name": "Gratuit",
+        "price": "0",
+        "description": "Parfait pour commencer",
+        "features": [
+          "Jusqu'à 10 produits",
+          "100 commandes/mois",
+          "Support par email",
+          "Tableau de bord basique",
+          "Rapports mensuels"
+        ],
+        "cta": "Commencer Gratuitement"
+      },
+      "basic": {
+        "name": "Basique",
+        "price": "99",
+        "description": "Pour les boutiques en croissance",
+        "features": [
+          "Jusqu'à 100 produits",
+          "1000 commandes/mois",
+          "Support 24/7",
+          "Tableau de bord avancé",
+          "Rapports quotidiens",
+          "Domaine personnalisé",
+          "Intégration d'expédition"
+        ],
+        "cta": "S'abonner Maintenant",
+        "popular": "Le Plus Populaire"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "299",
+        "description": "Pour les grandes boutiques",
+        "features": [
+          "Produits illimités",
+          "Commandes illimitées",
+          "Support VIP",
+          "Analyses avancées",
+          "API complète",
+          "Intégrations avancées",
+          "Équipe de support dédiée",
+          "Formation gratuite"
+        ],
+        "cta": "S'abonner Maintenant"
+      },
+      "currency": "€/mois"
+    },
+    "testimonials": {
+      "title": "Ce Que Disent Nos Clients",
+      "subtitle": "Avis d'entrepreneurs à succès",
+      "testimonial1": {
+        "text": "StorePro a complètement changé ma façon de gérer ma boutique. Maintenant je peux me concentrer sur la croissance au lieu de m'inquiéter de la technologie.",
+        "author": "Ahmed Al-Saeed",
+        "role": "Fondateur de la Boutique d'Électronique"
+      },
+      "testimonial2": {
+        "text": "La meilleure plateforme e-commerce que j'ai utilisée. Interface facile et excellent support!",
+        "author": "Fatima Mohammed",
+        "role": "Propriétaire de Boutique de Mode"
+      },
+      "testimonial3": {
+        "text": "Mes ventes ont augmenté de 300% en 6 mois grâce aux outils puissants et aux rapports précis.",
+        "author": "Khaled Al-Otaibi",
+        "role": "Gérant de Boutique de Sport"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Réponses aux questions les plus courantes",
+      "q1": {
+        "question": "Puis-je commencer gratuitement?",
+        "answer": "Oui! Nous offrons un forfait gratuit qui permet jusqu'à 10 produits et 100 commandes par mois. Vous pouvez mettre à niveau à tout moment."
+      },
+      "q2": {
+        "question": "Puis-je changer de forfait plus tard?",
+        "answer": "Absolument! Vous pouvez mettre à niveau ou rétrograder à tout moment. La différence sera calculée automatiquement."
+      },
+      "q3": {
+        "question": "Mes données sont-elles protégées?",
+        "answer": "Oui, nous utilisons les normes de sécurité et de cryptage les plus élevées pour protéger vos données et celles de vos clients."
+      },
+      "q4": {
+        "question": "Y a-t-il un support technique?",
+        "answer": "Oui, nous fournissons un support par email pour tous, et un support 24/7 pour les forfaits payants."
+      },
+      "q5": {
+        "question": "Puis-je utiliser mon propre domaine?",
+        "answer": "Oui, avec les forfaits payants vous pouvez connecter votre domaine personnalisé à votre boutique."
+      }
+    },
+    "cta": {
+      "title": "Prêt à Lancer Votre Boutique?",
+      "subtitle": "Rejoignez des milliers de marchands à succès aujourd'hui",
+      "button": "Commencer Gratuitement Maintenant"
+    },
+    "footer": {
+      "description": "Plateforme complète pour créer et gérer vos boutiques en ligne facilement",
+      "product": "Produit",
+      "features": "Fonctionnalités",
+      "pricing": "Tarification",
+      "about": "À Propos",
+      "company": "Entreprise",
+      "aboutUs": "À Propos de Nous",
+      "blog": "Blog",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "support": "Support",
+      "helpCenter": "Centre d'Aide",
+      "documentation": "Documentation",
+      "legal": "Légal",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions Générales",
+      "rights": "Tous droits réservés"
+    }
+  },
+  "storefront": {
+    "backToStore": "Retour à la Boutique",
+    "bankTransfer": "Virement Bancaire",
+    "orderNumber": "Commande #",
+    "orderedOn": "Commandé le",
+    "orderProgress": "Statut de la Commande",
+
+    "trackingSteps": {
+      "received": "Reçue",
+      "confirmed": "Confirmée",
+      "processing": "En Préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée"
+    },
+
+    "orderStatus": {
+      "pending": "En Attente",
+      "confirmed": "Confirmée",
+      "processing": "En Préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    },
+
+    "thankYouTitle": "Merci pour votre commande! 🎉",
+    "thankYouMessage": "Nous traiterons votre commande...",
+
+    "messages.orderNotFound": "Commande introuvable",
+    "store": "Boutique",
+    "allCategories": "Toutes les Catégories",
+    "clearFilters": "Effacer les Filtres",
+    "noProducts": "Aucun Produit",
+    "noProductsWithFilters": "Aucun produit ne correspond aux filtres",
+    "noProductsYet": "Aucun produit n'a encore été ajouté",
+    "backToCart": "Retour au Panier",
+    "checkoutTitle": "Finaliser la Commande",
+    "shippingAddress": "Adresse de Livraison",
+    "paymentMethod": "Méthode de Paiement",
+    "notes": "Notes",
+    "notesOptional": "Notes (optionnel)",
+    "notesPlaceholder": "Notes spéciales concernant la commande...",
+    "fullName": "Nom Complet",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "addressPlaceholder": "Numéro de bâtiment, rue, quartier",
+    "city": "Ville",
+    "state": "Région",
+    "country": "Pays",
+    "zipCode": "Code Postal",
+    "required": "*",
+    "cashOnDelivery": "Paiement à la Livraison",
+    "cashOnDeliveryDesc": "Payez en espèces à la réception",
+    "creditCard": "Carte de Crédit",
+    "comingSoon": "Bientôt disponible...",
+    "confirmOrder": "Confirmer la Commande",
+    "processingOrder": "Traitement de la commande...",
+    "messages": {
+      "storeNotFound": "Boutique introuvable",
+      "productNotFound": "Produit introuvable",
+      "productUnavailable": "Produit non disponible",
+      "availableStock": "Stock disponible: {{stock}}",
+      "fillRequired": "Veuillez remplir tous les champs obligatoires",
+      "loginRequired": "Vous devez d'abord vous connecter",
+      "orderSuccess": "Commande créée avec succès! 🎉",
+      "orderError": "Échec de la création de la commande"
+    },
+    "orderSummary": "Résumé de la Commande",
+    "freeShipping": "Gratuite",
+    "clearCart": "Vider le Panier",
+    "emptyCartDescription": "Vous n'avez pas encore ajouté de produits au panier",
+    "confirmRemove": "Êtes-vous sûr de vouloir supprimer ce produit?",
+    "confirmClearCart": "Voulez-vous vider le panier?",
+    "cartCleared": "Panier vidé",
+    "poweredBy": "Propulse par",
+    "rights": "Tous droits réservés",
+    "soldBy": "Vendu par",
+    "pieces": "Pieces",
+    "status": "Statut",
+    "backToProducts": "Retour aux produits",
+    "discount": "Remise",
+    "products": "Produits",
+    "allProducts": "Tous les Produits",
+    "search": "Rechercher un produit...",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "priceRange": "Fourchette de Prix",
+    "min": "Minimum",
+    "max": "Maximum",
+    "addToCart": "Ajouter au Panier",
+    "outOfStock": "Rupture de Stock",
+    "inStock": "En Stock",
+    "viewDetails": "Voir les Détails",
+    "relatedProducts": "Produits Similaires",
+    "description": "Description",
+    "specifications": "Spécifications",
+    "cart": "Panier",
+    "emptyCart": "Votre panier est vide",
+    "continueShopping": "Continuer les Achats",
+    "checkout": "Passer la Commande",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "total": "Total",
+    "quantity": "Quantité",
+    "remove": "Supprimer",
+    "price": "Prix"
+  },
+  "imageUpload": {
+    "logoFileFormats": "PNG, JPG (moins de 2 Mo)",
+    "uploadLogo": "Télécharger le logo",
+    "storeLogo": "Logo du magasin",
+    "title": "Images du produit",
+    "maxImagesError": "Vous pouvez télécharger jusqu'à {{max}} images maximum",
+    "fileSizeError": "La taille de l'image doit être inférieure à 5 Mo",
+    "uploadSuccess": "{{count}} image(s) téléchargée(s) avec succès !",
+    "deleteError": "Échec de la suppression de l'image",
+    "deleteSuccess": "Image supprimée",
+    "uploading": "Téléchargement en cours...",
+    "clickToUpload": "Cliquez pour télécharger des images ou faites-les glisser ici",
+    "fileFormats": "PNG, JPG, WEBP (jusqu'à {{max}} images, 5 Mo par image)",
+    "imageAlt": "Image {{number}}",
+    "primaryBadge": "Principale",
+    "setPrimaryTitle": "Définir comme principale",
+    "deleteTitle": "Supprimer",
+    "infoText": "💡 La première image sera l'image principale du produit. Vous pouvez la changer en cliquant sur l'image."
+  },
+  "subscriptionPlans": {
+    "title": "Plans d'abonnement",
+    "subtitle": "Choisissez le plan qui correspond à vos besoins",
+
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "features": {
+          "products": "Jusqu'à 10 produits",
+          "orders": "100 commandes par mois",
+          "support": "Support par email",
+          "dashboard": "Tableau de bord basique",
+          "reports": "Rapports mensuels"
+        }
+      },
+      "basic": {
+        "name": "Basique",
+        "popular": "Le plus populaire",
+        "features": {
+          "products": "Jusqu'à 100 produits",
+          "orders": "1000 commandes par mois",
+          "support": "Support 24/7",
+          "dashboard": "Tableau de bord avancé",
+          "reports": "Rapports quotidiens",
+          "domain": "Domaine personnalisé",
+          "shipping": "Intégration de livraison"
+        }
+      },
+      "pro": {
+        "name": "Professionnel",
+        "features": {
+          "products": "Produits illimités",
+          "orders": "Commandes illimitées",
+          "support": "Support VIP",
+          "analytics": "Analyses avancées",
+          "api": "API complet",
+          "integration": "Intégration avancée",
+          "team": "Équipe de support dédiée",
+          "training": "Formation gratuite"
+        }
+      }
+    },
+
+    "pricing": {
+      "perMonth": "SAR/mois"
+    },
+
+    "currentPlan": {
+      "title": "Plan actuel",
+      "expiresOn": "Expire le",
+      "willBeCancelled": "(Sera annulé)",
+      "badge": "Votre plan actuel"
+    },
+
+    "buttons": {
+      "upgrade": "Passer à",
+      "cancel": "Annuler l'abonnement",
+      "resume": "Reprendre l'abonnement",
+      "processing": "Traitement en cours...",
+      "currentPlan": "Plan actuel",
+      "notAvailable": "Non disponible"
+    },
+
+    "confirmations": {
+      "cancelSubscription": "Êtes-vous sûr de vouloir annuler votre abonnement ?"
+    },
+
+    "messages": {
+      "popupBlocked": "Veuillez autoriser les fenêtres pop-up pour finaliser le paiement",
+      "checkoutOpened": "La page de paiement s'est ouverte dans une nouvelle fenêtre"
+    },
+
+    "faq": {
+      "title": "Questions fréquentes",
+      "questions": {
+        "cancel": {
+          "question": "Puis-je annuler mon abonnement à tout moment ?",
+          "answer": "Oui, vous pouvez annuler votre abonnement à tout moment. Il restera actif jusqu'à la fin de la période payée."
+        },
+        "change": {
+          "question": "Puis-je passer à un plan supérieur ou inférieur ?",
+          "answer": "Oui, vous pouvez changer votre plan à tout moment. La différence sera calculée automatiquement."
+        },
+        "payment": {
+          "question": "Quels sont les moyens de paiement disponibles ?",
+          "answer": "Nous acceptons toutes les cartes de crédit et de débit principales (Visa, Mastercard)."
+        },
+        "security": {
+          "question": "Les données sont-elles sécurisées ?",
+          "answer": "Oui, nous utilisons Stripe pour traiter les paiements avec les plus hauts standards de sécurité."
+        }
+      }
+    }
+  },
+  "subscriptionSuccess": {
+    "loading": {
+      "title": "Vérification de l'abonnement...",
+      "subtitle": "Veuillez patienter un instant"
+    },
+    "success": {
+      "titleVerified": "Abonnement réussi ! 🎉",
+      "titlePending": "Merci !",
+      "messageVerified": "Toutes les fonctionnalités du plan ont été activées sur votre compte.",
+      "messagePending": "L'abonnement sera activé dans quelques instants.",
+      "redirectMessage": "Vous serez redirigé vers le tableau de bord dans quelques instants...",
+      "dashboardButton": "Aller au tableau de bord"
+    }
+  },
+  "subscriptionCancel": {
+    "title": "Opération annulée",
+    "message": "Le processus d'abonnement n'a pas été complété. Aucun montant n'a été débité de votre compte.",
+    "buttons": {
+      "retry": "Réessayer",
+      "dashboard": "Retour au tableau de bord"
+    }
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "hero": {
+      "title": "Vous Aider à Créer Votre Boutique en Ligne",
+      "subtitle": "Une plateforme complète pour créer et gérer vos boutiques e-commerce facilement et professionnellement",
+      "description": "StorePro est une plateforme SaaS avancée qui permet aux entrepreneurs de lancer leurs boutiques en ligne en quelques minutes, avec des outils puissants pour gérer les produits, les commandes et les clients."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Nous croyons que chacun mérite une chance de créer sa propre entreprise en ligne. Notre mission est de permettre aux entrepreneurs et commerçants de créer des boutiques en ligne professionnelles sans expertise technique complexe."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Nous visons à devenir la plateforme leader dans la région arabe pour la création de boutiques en ligne, en permettant à un million d'entrepreneurs de réaliser leurs rêves d'entreprise d'ici 2030."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "value1": {
+        "title": "Simplicité",
+        "description": "Nous rendons la technologie complexe simple et accessible à tous"
+      },
+      "value2": {
+        "title": "Innovation",
+        "description": "Nous innovons avec de nouvelles solutions pour répondre aux besoins changeants du marché"
+      },
+      "value3": {
+        "title": "Qualité",
+        "description": "Nous nous engageons à offrir la plus haute qualité dans tout ce que nous proposons"
+      },
+      "value4": {
+        "title": "Support",
+        "description": "Nous fournissons un support continu pour assurer le succès de nos clients"
+      }
+    },
+    "stats": {
+      "stores": "Boutiques Actives",
+      "orders": "Commandes Mensuelles",
+      "revenue": "Milliards SAR de Transactions",
+      "satisfaction": "Satisfaction Client"
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Un groupe d'experts passionnés par votre succès"
+    },
+    "journey": {
+      "title": "Notre Parcours",
+      "2023": {
+        "title": "Le Début",
+        "description": "StorePro fondé pour simplifier le e-commerce"
+      },
+      "2024": {
+        "title": "Croissance",
+        "description": "Atteint 1000 boutiques actives et lancé de nouvelles fonctionnalités"
+      },
+      "2025": {
+        "title": "Expansion",
+        "description": "Ouverture de nouveaux bureaux et agrandissement de l'équipe"
+      },
+      "2026": {
+        "title": "L'Avenir",
+        "description": "Poursuite de l'innovation pour mieux servir nos clients"
+      }
+    },
+    "cta": {
+      "title": "Prêt à Commencer Votre Aventure ?",
+      "description": "Rejoignez des milliers de commerçants prospères qui font confiance à StorePro",
+      "button": "Commencer Gratuitement"
+    }
+  },
+  "registerChoice": {
+    "header": {
+      "title": "Choisissez le Type de Compte",
+      "subtitle": "Voulez-vous faire des achats ou créer votre propre boutique ?"
+    },
+    "options": {
+      "customer": {
+        "title": "S'inscrire en tant que Client",
+        "subtitle": "Pour faire des achats dans les boutiques disponibles",
+        "features": {
+          "browse": "Parcourir les produits de toutes les boutiques",
+          "cart": "Ajouter des produits au panier",
+          "purchase": "Finaliser les achats",
+          "track": "Suivre vos commandes",
+          "addresses": "Enregistrer vos adresses favorites"
+        }
+      },
+      "store": {
+        "title": "S'inscrire en tant que Propriétaire de Boutique",
+        "subtitle": "Pour créer et gérer votre boutique en ligne",
+        "features": {
+          "create": "Créer votre propre boutique",
+          "manage": "Gérer les produits et les commandes",
+          "dashboard": "Tableau de bord avancé",
+          "reports": "Rapports et statistiques",
+          "support": "Support technique continu"
+        }
+      }
+    },
+    "badges": {
+      "popular": "Le Plus Populaire"
+    },
+    "buttons": {
+      "choose": "Choisir ce Type"
+    },
+    "footer": {
+      "haveAccount": "Vous avez déjà un compte ?",
+      "login": "Se connecter"
+    }
+  },
+  "registerCustomer": {
+    "pageTitle": "Inscription Client",
+    "backToChoice": "Retour au choix du type de compte",
+
+    "sections": {
+      "personalInfo": "Informations personnelles"
+    },
+
+    "form": {
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Entrez votre nom complet"
+      },
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "Entrez votre e-mail"
+      },
+      "phone": {
+        "label": "Numéro de téléphone (optionnel)",
+        "placeholder": "501234567"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe"
+      },
+      "confirmPassword": {
+        "label": "Confirmer le mot de passe",
+        "placeholder": "Confirmez votre mot de passe"
+      }
+    },
+
+    "buttons": {
+      "register": "S'inscrire",
+      "loading": "Inscription en cours..."
+    },
+
+    "terms": {
+      "text": "En m'inscrivant, j'accepte les",
+      "termsOfUse": "Conditions d'utilisation",
+      "and": "et la",
+      "privacyPolicy": "Politique de confidentialité"
+    },
+
+    "sidebar": {
+      "title": "Faites vos achats dans les meilleures boutiques",
+      "description": "Découvrez des milliers de produits de boutiques de confiance et profitez d'une expérience d'achat fluide et sécurisée",
+      "features": {
+        "browse": "Parcourir des milliers de produits",
+        "payment": "Paiement sécurisé et garanti",
+        "shipping": "Livraison rapide",
+        "support": "Service client exceptionnel"
+      }
+    },
+
+    "validation": {
+      "allFieldsRequired": "Veuillez remplir tous les champs obligatoires",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères"
+    },
+
+    "messages": {
+      "success": "Inscription réussie ! 🎉",
+      "error": "Échec de l'inscription"
+    }
+  },
+  "registerStore": {
+    "pageTitle": "Inscription Propriétaire de Boutique",
+    "backToChoice": "Retour au choix du type de compte",
+
+    "sections": {
+      "personalInfo": "Informations personnelles",
+      "storeInfo": "Informations de la boutique"
+    },
+
+    "personalForm": {
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Entrez votre nom complet"
+      },
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "Entrez votre e-mail"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "501234567"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe"
+      }
+    },
+
+    "storeForm": {
+      "name": {
+        "label": "Nom de la boutique",
+        "placeholder": "Entrez le nom de la boutique"
+      },
+      "description": {
+        "label": "Description de la boutique",
+        "placeholder": "Écrivez une brève description de votre boutique"
+      },
+      "email": {
+        "label": "E-mail de la boutique (optionnel)",
+        "placeholder": "E-mail de la boutique (laissez vide pour utiliser le vôtre)"
+      },
+      "phone": {
+        "label": "Téléphone de la boutique (optionnel)",
+        "placeholder": "Numéro de la boutique (laissez vide pour utiliser le vôtre)"
+      }
+    },
+
+    "buttons": {
+      "register": "S'inscrire",
+      "loading": "Inscription en cours..."
+    },
+
+    "terms": {
+      "text": "En m'inscrivant, j'accepte les",
+      "termsOfUse": "Conditions d'utilisation",
+      "and": "et la",
+      "privacyPolicy": "Politique de confidentialité"
+    },
+
+    "sidebar": {
+      "title": "Tout ce dont vous avez besoin pour développer votre commerce",
+      "description": "Inscrivez-vous maintenant et lancez votre boutique avec plus de 68 000 boutiques bénéficiant de centaines de services logistiques et d'outils marketing.",
+      "features": {
+        "products": "Gestion des produits",
+        "orders": "Système de commandes",
+        "reports": "Rapports détaillés",
+        "support": "Support technique 24/7"
+      }
+    },
+
+    "loginTab": {
+      "comingSoon": "Bientôt... page de connexion"
+    }
+  },
+  "login": {
+    "pageTitle": "Connexion",
+
+    "welcome": {
+      "title": "Bon retour ! 👋",
+      "subtitle": "Connectez-vous pour accéder à votre tableau de bord"
+    },
+
+    "form": {
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "Entrez votre e-mail"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe"
+      },
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié ?"
+    },
+
+    "buttons": {
+      "login": "Se connecter",
+      "loading": "Connexion en cours...",
+      "customerLogin": "Connexion client"
+    },
+
+    "register": {
+      "text": "Vous n'avez pas de compte ?",
+      "link": "Créez votre boutique maintenant"
+    },
+
+    "divider": {
+      "or": "Ou"
+    },
+
+    "sidebar": {
+      "title": "Commencez votre aventure dans le e-commerce",
+      "description": "Plus de 68 000 boutiques nous font confiance pour gérer et développer leurs activités. Rejoignez-les aujourd'hui et démarrez votre parcours vers le succès.",
+      "stats": {
+        "stores": {
+          "number": "68K+",
+          "label": "Boutiques actives"
+        },
+        "uptime": {
+          "number": "99.9%",
+          "label": "Disponibilité"
+        },
+        "support": {
+          "number": "24/7",
+          "label": "Support technique"
+        },
+        "features": {
+          "number": "50+",
+          "label": "Fonctionnalités"
+        }
+      }
+    }
+  },
+  "customerShop": {
+    "navbar": {
+      "logo": "StorePro",
+      "cart": "Panier",
+      "user": {
+        "profile": "Profil",
+        "logout": "Déconnexion"
+      }
+    },
+
+    "search": {
+      "placeholder": "Rechercher un produit...",
+      "storeFilter": "Toutes les boutiques"
+    },
+
+    "product": {
+      "outOfStock": "Rupture de stock",
+      "price": "SAR",
+      "addToCart": "Ajouter au panier"
+    },
+
+    "emptyState": {
+      "noProducts": "Aucun produit",
+      "noResults": "Aucun produit correspondant trouvé",
+      "noAvailable": "Aucun produit disponible actuellement"
+    },
+
+    "messages": {
+      "outOfStock": "Produit non disponible",
+      "cartEmpty": "Le panier est vide",
+      "fetchError": "Échec du chargement des données",
+      "logoutSuccess": "Déconnexion réussie",
+      "addedToCart": "Produit ajouté au panier"
+    }
+  },
+  "myOrders": {
+    "pageTitle": "Mes Commandes",
+    "pageSubtitle": "Suivez et gérez toutes vos commandes",
+
+    "navbar": {
+      "logo": "StorePro",
+      "cart": "Panier",
+      "user": {
+        "myOrders": "Mes commandes",
+        "logout": "Déconnexion"
+      }
+    },
+
+    "filters": {
+      "searchPlaceholder": "Rechercher par numéro de commande ou nom de boutique...",
+      "statusFilter": {
+        "all": "Tous les statuts",
+        "pending": "En attente",
+        "confirmed": "Confirmé",
+        "processing": "En préparation",
+        "shipped": "Expédié",
+        "delivered": "Livré",
+        "cancelled": "Annulé"
+      }
+    },
+
+    "orderCard": {
+      "orderNumber": "N° de commande",
+      "items": "produit",
+      "price": "SAR"
+    },
+
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmé",
+      "processing": "En préparation",
+      "shipped": "Expédié",
+      "delivered": "Livré",
+      "cancelled": "Annulé"
+    },
+
+    "emptyState": {
+      "noOrders": "Aucune commande",
+      "noResults": "Aucune commande correspondante trouvée",
+      "noOrdersYet": "Vous n'avez pas encore passé de commandes",
+      "startShopping": "Commencer à acheter"
+    },
+
+    "messages": {
+      "logoutSuccess": "Déconnexion réussie",
+      "fetchError": "Échec du chargement des commandes"
+    }
+  },
+  "customerShopLayout": {
+    "search": {
+      "placeholder": "Rechercher un produit...",
+      "storeFilter": "Toutes les boutiques"
+    },
+
+    "product": {
+      "outOfStock": "Rupture de stock",
+      "price": "SAR",
+      "addToCart": "Ajouter au panier"
+    },
+
+    "emptyState": {
+      "noProducts": "Aucun produit",
+      "noResults": "Aucun produit correspondant trouvé",
+      "noAvailable": "Aucun produit disponible actuellement"
+    },
+
+    "messages": {
+      "outOfStock": "Produit non disponible",
+      "fetchError": "Échec du chargement des données",
+      "addedToCart": "Produit ajouté au panier"
+    }
+  },
+  "menu": {
+    "dashboard": "Tableau de bord",
+    "products": "Produits",
+    "orders": "Commandes",
+    "customers": "Clients",
+    "settings": "Paramètres",
+    "subscription": "Abonnement",
+    "logout": "Déconnexion"
+  }
+}
