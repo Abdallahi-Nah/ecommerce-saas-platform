@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
-      "https://your-frontend.vercel.app",
+      "https://ecommerce-saas-platform-mvi3.vercel.app",
       "http://localhost:3000",
       "http://localhost:5173",
     ],
