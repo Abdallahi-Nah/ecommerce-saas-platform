@@ -269,6 +269,29 @@ exports.updateOrderStatus = async (req, res) => {
   try {
     const { status } = req.body;
 
+    console.log("📝 Updating order status:", {
+      orderId: req.params.id,
+      newStatus: status,
+      userId: req.user?._id,
+      storeId: req.user?.storeId,
+    });
+
+    // التحقق من صحة الحالة
+    const validStatuses = [
+      "pending",
+      "confirmed",
+      "processing",
+      "shipped",
+      "delivered",
+      "cancelled",
+    ];
+    if (!validStatuses.includes(status)) {
+      return res.status(400).json({
+        success: false,
+        message: "حالة الطلب غير صحيحة",
+      });
+    }
+
     const order = await Order.findById(req.params.id);
 
     if (!order) {
@@ -288,6 +311,7 @@ exports.updateOrderStatus = async (req, res) => {
 
     const oldStatus = order.status;
 
+    // تحديث الحالة
     order.status = status;
 
     // تحديث التواريخ
@@ -297,15 +321,24 @@ exports.updateOrderStatus = async (req, res) => {
 
     await order.save();
 
-    // جلب بيانات العميل والمتجر
-    const user = await User.findById(order.customerId);
-    const store = await Store.findById(order.storeId);
+    console.log("✅ Order status updated successfully:", order._id);
 
-    // إرسال إيميل تحديث الحالة
-    if (user && store && oldStatus !== status) {
-      sendOrderStatusUpdateEmail(order, user, store, oldStatus).catch((err) =>
-        console.error("Order status email error:", err)
-      );
+    // إرسال إيميل تحديث الحالة (بدون انتظار)
+    if (oldStatus !== status) {
+      try {
+        const user = await User.findById(order.customerId);
+        const store = await Store.findById(order.storeId);
+
+        if (user && store) {
+          sendOrderStatusUpdateEmail(order, user, store, oldStatus).catch(
+            (err) => console.error("⚠️ Order status email error:", err)
+          );
+          console.log("📧 Status update email queued");
+        }
+      } catch (emailError) {
+        console.error("⚠️ Email service error:", emailError);
+        // لا نوقف العملية
+      }
     }
 
     res.status(200).json({
@@ -314,10 +347,11 @@ exports.updateOrderStatus = async (req, res) => {
       data: order,
     });
   } catch (error) {
-    console.error("Update Order Status Error:", error);
+    console.error("❌ Update Order Status Error:", error);
     res.status(500).json({
       success: false,
       message: "خطأ في تحديث حالة الطلب",
+      error: process.env.NODE_ENV === "development" ? error.message : undefined,
     });
   }
 };
