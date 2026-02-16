@@ -1,18 +1,27 @@
-const Product = require('../models/Product');
-const Store = require('../models/Store');
+const Product = require("../models/Product");
+const Store = require("../models/Store");
 
 // @desc    إنشاء منتج جديد
 // @route   POST /api/products
 // @access  Private (Store Owner)
 exports.createProduct = async (req, res) => {
   try {
-    const { name, description, price, compareAtPrice, cost, stock, category, images } = req.body;
+    const {
+      name,
+      description,
+      price,
+      compareAtPrice,
+      cost,
+      stock,
+      category,
+      images,
+    } = req.body;
 
     // التحقق من أن المستخدم لديه متجر
     if (!req.user.storeId) {
       return res.status(403).json({
         success: false,
-        message: 'يجب أن يكون لديك متجر لإنشاء منتج',
+        message: "يجب أن يكون لديك متجر لإنشاء منتج",
       });
     }
 
@@ -27,25 +36,25 @@ exports.createProduct = async (req, res) => {
       category,
       images,
       storeId: req.user.storeId,
-      status: 'active',
+      status: "active",
     });
 
     // تحديث إحصائيات المتجر
     await Store.findByIdAndUpdate(req.user.storeId, {
-      $inc: { 'stats.totalProducts': 1 },
+      $inc: { "stats.totalProducts": 1 },
     });
 
     res.status(201).json({
       success: true,
-      message: 'تم إنشاء المنتج بنجاح',
+      message: "تم إنشاء المنتج بنجاح",
       data: product,
     });
   } catch (error) {
-    console.error('Create Product Error:', error);
+    console.error("Create Product Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في إنشاء المنتج',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined,
+      message: "خطأ في إنشاء المنتج",
+      error: process.env.NODE_ENV === "development" ? error.message : undefined,
     });
   }
 };
@@ -58,7 +67,7 @@ exports.getMyProducts = async (req, res) => {
     if (!req.user.storeId) {
       return res.status(403).json({
         success: false,
-        message: 'يجب أن يكون لديك متجر',
+        message: "يجب أن يكون لديك متجر",
       });
     }
 
@@ -71,8 +80,8 @@ exports.getMyProducts = async (req, res) => {
     if (category) filter.category = category;
     if (search) {
       filter.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { description: { $regex: search, $options: 'i' } },
+        { name: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
       ];
     }
 
@@ -94,10 +103,10 @@ exports.getMyProducts = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error('Get Products Error:', error);
+    console.error("Get Products Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المنتجات',
+      message: "خطأ في جلب المنتجات",
     });
   }
 };
@@ -112,7 +121,7 @@ exports.getProductById = async (req, res) => {
     if (!product) {
       return res.status(404).json({
         success: false,
-        message: 'المنتج غير موجود',
+        message: "المنتج غير موجود",
       });
     }
 
@@ -120,7 +129,7 @@ exports.getProductById = async (req, res) => {
     if (product.storeId.toString() !== req.user.storeId.toString()) {
       return res.status(403).json({
         success: false,
-        message: 'غير مصرح لك بالوصول لهذا المنتج',
+        message: "غير مصرح لك بالوصول لهذا المنتج",
       });
     }
 
@@ -129,10 +138,10 @@ exports.getProductById = async (req, res) => {
       data: product,
     });
   } catch (error) {
-    console.error('Get Product Error:', error);
+    console.error("Get Product Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المنتج',
+      message: "خطأ في جلب المنتج",
     });
   }
 };
@@ -147,7 +156,7 @@ exports.updateProduct = async (req, res) => {
     if (!product) {
       return res.status(404).json({
         success: false,
-        message: 'المنتج غير موجود',
+        message: "المنتج غير موجود",
       });
     }
 
@@ -155,7 +164,7 @@ exports.updateProduct = async (req, res) => {
     if (product.storeId.toString() !== req.user.storeId.toString()) {
       return res.status(403).json({
         success: false,
-        message: 'غير مصرح لك بتعديل هذا المنتج',
+        message: "غير مصرح لك بتعديل هذا المنتج",
       });
     }
 
@@ -168,14 +177,14 @@ exports.updateProduct = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'تم تحديث المنتج بنجاح',
+      message: "تم تحديث المنتج بنجاح",
       data: updatedProduct,
     });
   } catch (error) {
-    console.error('Update Product Error:', error);
+    console.error("Update Product Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في تحديث المنتج',
+      message: "خطأ في تحديث المنتج",
     });
   }
 };
@@ -190,7 +199,7 @@ exports.deleteProduct = async (req, res) => {
     if (!product) {
       return res.status(404).json({
         success: false,
-        message: 'المنتج غير موجود',
+        message: "المنتج غير موجود",
       });
     }
 
@@ -198,7 +207,7 @@ exports.deleteProduct = async (req, res) => {
     if (product.storeId.toString() !== req.user.storeId.toString()) {
       return res.status(403).json({
         success: false,
-        message: 'غير مصرح لك بحذف هذا المنتج',
+        message: "غير مصرح لك بحذف هذا المنتج",
       });
     }
 
@@ -206,18 +215,18 @@ exports.deleteProduct = async (req, res) => {
 
     // تحديث إحصائيات المتجر
     await Store.findByIdAndUpdate(req.user.storeId, {
-      $inc: { 'stats.totalProducts': -1 },
+      $inc: { "stats.totalProducts": -1 },
     });
 
     res.status(200).json({
       success: true,
-      message: 'تم حذف المنتج بنجاح',
+      message: "تم حذف المنتج بنجاح",
     });
   } catch (error) {
-    console.error('Delete Product Error:', error);
+    console.error("Delete Product Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في حذف المنتج',
+      message: "خطأ في حذف المنتج",
     });
   }
 };
@@ -230,39 +239,89 @@ exports.getStoreStats = async (req, res) => {
     if (!req.user.storeId) {
       return res.status(403).json({
         success: false,
-        message: 'يجب أن يكون لديك متجر',
+        message: "يجب أن يكون لديك متجر",
       });
     }
 
-    const store = await Store.findById(req.user.storeId);
+    const storeId = req.user.storeId;
+    const Order = require("../models/Order");
+    const mongoose = require("mongoose");
 
-    // إحصائيات المنتجات
-    const totalProducts = await Product.countDocuments({
-      storeId: req.user.storeId,
-      status: 'active',
-    });
+    console.log("📊 Fetching stats for store:", storeId);
 
-    const lowStockProducts = await Product.countDocuments({
-      storeId: req.user.storeId,
-      stock: { $lt: 10 },
-      status: 'active',
-    });
+    // استخدام Promise.all لتنفيذ جميع العمليات بالتوازي (أسرع)
+    const [
+      totalProducts,
+      lowStockProducts,
+      totalOrders,
+      revenueData,
+      uniqueCustomerIds,
+    ] = await Promise.all([
+      // 1. عدد المنتجات النشطة
+      Product.countDocuments({
+        storeId,
+        status: "active",
+      }),
+
+      // 2. عدد المنتجات ذات المخزون المنخفض
+      Product.countDocuments({
+        storeId,
+        status: "active",
+        stock: { $lt: 10 },
+      }),
+
+      // 3. إجمالي عدد الطلبات
+      Order.countDocuments({ storeId }),
+
+      // 4. حساب الإيرادات (الطلبات المكتملة فقط)
+      Order.aggregate([
+        {
+          $match: {
+            storeId: mongoose.Types.ObjectId(storeId),
+            status: {
+              $in: ["confirmed", "processing", "shipped", "delivered"],
+            },
+          },
+        },
+        {
+          $group: {
+            _id: null,
+            totalRevenue: { $sum: "$total" },
+          },
+        },
+      ]),
+
+      // 5. عدد العملاء الفريدين
+      Order.distinct("customerId", { storeId }),
+    ]);
+
+    // استخراج الإيرادات
+    const totalRevenue =
+      revenueData.length > 0 ? revenueData[0].totalRevenue : 0;
+
+    // عدد العملاء الفريدين
+    const totalCustomers = uniqueCustomerIds.length;
+
+    const stats = {
+      totalProducts,
+      lowStockProducts,
+      totalOrders,
+      totalRevenue: Math.round(totalRevenue * 100) / 100, // تقريب لرقمين عشريين
+      totalCustomers,
+    };
+
+    console.log("✅ Stats calculated:", stats);
 
     res.status(200).json({
       success: true,
-      data: {
-        totalProducts,
-        lowStockProducts,
-        totalOrders: store.stats.totalOrders || 0,
-        totalRevenue: store.stats.totalRevenue || 0,
-        totalCustomers: store.stats.totalCustomers || 0,
-      },
+      data: stats,
     });
   } catch (error) {
-    console.error('Get Stats Error:', error);
+    console.error("❌ Get Store Stats Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب الإحصائيات',
+      message: "خطأ في جلب الإحصائيات",
+      error: process.env.NODE_ENV === "development" ? error.message : undefined,
     });
   }
 };
@@ -273,20 +332,27 @@ exports.getStoreStats = async (req, res) => {
 exports.getStoreProducts = async (req, res) => {
   try {
     const { storeId } = req.params;
-    const { category, search, minPrice, maxPrice, page = 1, limit = 12 } = req.query;
+    const {
+      category,
+      search,
+      minPrice,
+      maxPrice,
+      page = 1,
+      limit = 12,
+    } = req.query;
 
     // بناء الفلتر
     const filter = {
       storeId,
-      status: 'active',
+      status: "active",
       isVisible: true,
     };
 
     if (category) filter.category = category;
     if (search) {
       filter.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { description: { $regex: search, $options: 'i' } },
+        { name: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
       ];
     }
     if (minPrice || maxPrice) {
@@ -297,7 +363,7 @@ exports.getStoreProducts = async (req, res) => {
 
     // جلب المنتجات
     const products = await Product.find(filter)
-      .select('-createdAt -updatedAt -__v')
+      .select("-createdAt -updatedAt -__v")
       .sort({ isFeatured: -1, createdAt: -1 })
       .limit(limit * 1)
       .skip((page - 1) * limit);
@@ -305,7 +371,10 @@ exports.getStoreProducts = async (req, res) => {
     const total = await Product.countDocuments(filter);
 
     // جلب Categories المتاحة
-    const categories = await Product.distinct('category', { storeId, status: 'active' });
+    const categories = await Product.distinct("category", {
+      storeId,
+      status: "active",
+    });
 
     res.status(200).json({
       success: true,
@@ -318,10 +387,10 @@ exports.getStoreProducts = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error('Get Store Products Error:', error);
+    console.error("Get Store Products Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المنتجات',
+      message: "خطأ في جلب المنتجات",
     });
   }
 };
@@ -332,14 +401,14 @@ exports.getStoreProducts = async (req, res) => {
 exports.getPublicProduct = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id).populate(
-      'storeId',
-      'name slug email phone'
+      "storeId",
+      "name slug email phone"
     );
 
-    if (!product || product.status !== 'active') {
+    if (!product || product.status !== "active") {
       return res.status(404).json({
         success: false,
-        message: 'المنتج غير موجود',
+        message: "المنتج غير موجود",
       });
     }
 
@@ -352,10 +421,10 @@ exports.getPublicProduct = async (req, res) => {
       data: product,
     });
   } catch (error) {
-    console.error('Get Public Product Error:', error);
+    console.error("Get Public Product Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المنتج',
+      message: "خطأ في جلب المنتج",
     });
   }
 };
@@ -372,7 +441,7 @@ exports.getPublicStore = async (req, res) => {
     if (!store || !store.isActive) {
       return res.status(404).json({
         success: false,
-        message: 'المتجر غير موجود',
+        message: "المتجر غير موجود",
       });
     }
 
@@ -381,10 +450,10 @@ exports.getPublicStore = async (req, res) => {
       data: store,
     });
   } catch (error) {
-    console.error('Get Public Store Error:', error);
+    console.error("Get Public Store Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المتجر',
+      message: "خطأ في جلب المتجر",
     });
   }
 };
@@ -395,7 +464,7 @@ exports.getPublicStore = async (req, res) => {
 exports.getAllStores = async (req, res) => {
   try {
     const stores = await Store.find({ isActive: true })
-      .select('name slug description logo')
+      .select("name slug description logo")
       .sort({ createdAt: -1 });
 
     res.status(200).json({
@@ -403,10 +472,10 @@ exports.getAllStores = async (req, res) => {
       data: stores,
     });
   } catch (error) {
-    console.error('Get All Stores Error:', error);
+    console.error("Get All Stores Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في جلب المتاجر',
+      message: "خطأ في جلب المتاجر",
     });
   }
 };
