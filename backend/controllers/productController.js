@@ -245,68 +245,37 @@ exports.getStoreStats = async (req, res) => {
 
     const storeId = req.user.storeId;
     const Order = require("../models/Order");
-    const mongoose = require("mongoose");
 
     console.log("📊 Fetching stats for store:", storeId);
 
-    // استخدام Promise.all لتنفيذ جميع العمليات بالتوازي (أسرع)
-    const [
-      totalProducts,
-      lowStockProducts,
-      totalOrders,
-      revenueData,
-      uniqueCustomerIds,
-    ] = await Promise.all([
-      // 1. عدد المنتجات النشطة
-      Product.countDocuments({
-        storeId,
-        status: "active",
-      }),
-
-      // 2. عدد المنتجات ذات المخزون المنخفض
-      Product.countDocuments({
-        storeId,
-        status: "active",
-        stock: { $lt: 10 },
-      }),
-
-      // 3. إجمالي عدد الطلبات
-      Order.countDocuments({ storeId }),
-
-      // 4. حساب الإيرادات (الطلبات المكتملة فقط)
-      Order.aggregate([
-        {
-          $match: {
-            storeId: mongoose.Types.ObjectId(storeId),
-            status: {
-              $in: ["confirmed", "processing", "shipped", "delivered"],
-            },
-          },
-        },
-        {
-          $group: {
-            _id: null,
-            totalRevenue: { $sum: "$total" },
-          },
-        },
-      ]),
-
-      // 5. عدد العملاء الفريدين
-      Order.distinct("customerId", { storeId }),
+    // جلب جميع البيانات بالتوازي
+    const [totalProducts, lowStockProducts, allOrders] = await Promise.all([
+      Product.countDocuments({ storeId, status: "active" }),
+      Product.countDocuments({ storeId, status: "active", stock: { $lt: 10 } }),
+      Order.find({ storeId }).select("customerId total status"),
     ]);
 
-    // استخراج الإيرادات
-    const totalRevenue =
-      revenueData.length > 0 ? revenueData[0].totalRevenue : 0;
+    // حساب الإحصائيات من الطلبات
+    const totalOrders = allOrders.length;
 
-    // عدد العملاء الفريدين
-    const totalCustomers = uniqueCustomerIds.length;
+    // حساب الإيرادات (الطلبات المكتملة فقط)
+    const totalRevenue = allOrders
+      .filter((order) =>
+        ["confirmed", "processing", "shipped", "delivered"].includes(order.status)
+      )
+      .reduce((sum, order) => sum + order.total, 0);
+
+    // حساب العملاء الفريدين
+    const uniqueCustomers = new Set(
+      allOrders.map((order) => order.customerId.toString())
+    );
+    const totalCustomers = uniqueCustomers.size;
 
     const stats = {
       totalProducts,
       lowStockProducts,
       totalOrders,
-      totalRevenue: Math.round(totalRevenue * 100) / 100, // تقريب لرقمين عشريين
+      totalRevenue: Math.round(totalRevenue * 100) / 100,
       totalCustomers,
     };
 
