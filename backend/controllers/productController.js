@@ -1,5 +1,8 @@
 const Product = require('../models/Product');
 const Store = require('../models/Store');
+const Order = require("../models/Order");
+const mongoose = require("mongoose");
+const cloudinary = require("../config/cloudinary");
 
 // @desc    إنشاء منتج جديد
 // @route   POST /api/products
@@ -225,44 +228,83 @@ exports.deleteProduct = async (req, res) => {
 // @desc    جلب إحصائيات المتجر
 // @route   GET /api/products/stats
 // @access  Private (Store Owner)
+// Get store statistics
 exports.getStoreStats = async (req, res) => {
   try {
-    if (!req.user.storeId) {
-      return res.status(403).json({
-        success: false,
-        message: 'يجب أن يكون لديك متجر',
-      });
-    }
+    const storeId = req.user.storeId;
 
-    const store = await Store.findById(req.user.storeId);
+    console.log('📊 Fetching stats for store:', storeId);
 
-    // إحصائيات المنتجات
-    const totalProducts = await Product.countDocuments({
-      storeId: req.user.storeId,
-      status: 'active',
-    });
+    // استخدام Promise.all لتنفيذ جميع العمليات بالتوازي (أسرع)
+    const [
+      totalProducts,
+      lowStockProducts,
+      totalOrders,
+      revenueData,
+      uniqueCustomerIds,
+    ] = await Promise.all([
+      // 1. عدد المنتجات النشطة
+      Product.countDocuments({ 
+        storeId, 
+        status: 'active' 
+      }),
 
-    const lowStockProducts = await Product.countDocuments({
-      storeId: req.user.storeId,
-      stock: { $lt: 10 },
-      status: 'active',
-    });
+      // 2. عدد المنتجات ذات المخزون المنخفض
+      Product.countDocuments({
+        storeId,
+        status: 'active',
+        stock: { $lt: 10 },
+      }),
+
+      // 3. إجمالي عدد الطلبات
+      Order.countDocuments({ storeId }),
+
+      // 4. حساب الإيرادات (الطلبات المكتملة فقط)
+      Order.aggregate([
+        {
+          $match: {
+            storeId: mongoose.Types.ObjectId(storeId),
+            status: { $in: ['confirmed', 'processing', 'shipped', 'delivered'] },
+          },
+        },
+        {
+          $group: {
+            _id: null,
+            totalRevenue: { $sum: '$total' },
+          },
+        },
+      ]),
+
+      // 5. عدد العملاء الفريدين
+      Order.distinct('customerId', { storeId }),
+    ]);
+
+    // استخراج الإيرادات
+    const totalRevenue = revenueData.length > 0 ? revenueData[0].totalRevenue : 0;
+
+    // عدد العملاء الفريدين
+    const totalCustomers = uniqueCustomerIds.length;
+
+    const stats = {
+      totalProducts,
+      lowStockProducts,
+      totalOrders,
+      totalRevenue: Math.round(totalRevenue * 100) / 100, // تقريب لرقمين عشريين
+      totalCustomers,
+    };
+
+    console.log('✅ Stats calculated:', stats);
 
     res.status(200).json({
       success: true,
-      data: {
-        totalProducts,
-        lowStockProducts,
-        totalOrders: store.stats.totalOrders || 0,
-        totalRevenue: store.stats.totalRevenue || 0,
-        totalCustomers: store.stats.totalCustomers || 0,
-      },
+      data: stats,
     });
   } catch (error) {
-    console.error('Get Stats Error:', error);
+    console.error('❌ Get Store Stats Error:', error);
     res.status(500).json({
       success: false,
       message: 'خطأ في جلب الإحصائيات',
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
 };
