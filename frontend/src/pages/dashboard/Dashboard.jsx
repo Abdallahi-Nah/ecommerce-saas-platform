@@ -94,11 +94,11 @@ const Dashboard = () => {
         />
         <StatsCard
           title={t("dashboard.stats.revenue")}
-          value={`${stats.totalRevenue.toLocaleString()} ريال`}
+          value={`${stats.totalRevenue.toFixed(2)} ${t("dashboard.currency")}`}
           icon={DollarSign}
           color="purple"
-          trend="up"
-          trendValue="+23%"
+          trend={stats.totalRevenue > 0 ? "up" : undefined}
+          trendValue={stats.totalRevenue > 0 ? "+23%" : undefined}
         />
         <StatsCard
           title={t("dashboard.stats.customers")}

@@ -11,6 +11,7 @@ import {
   MapPin,
   Image as ImageIcon,
   Save,
+  Upload,
 } from "lucide-react";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
