@@ -106,17 +106,25 @@ const Checkout = () => {
         customerNotes: formData.customerNotes,
       };
 
-      const result = await createOrderCheckout(orderData);
+      try {
+        const result = await createOrderCheckout(orderData);
 
-      if (result.success) {
-        // إعادة التوجيه لصفحة Stripe
-        window.location.href = result.data.url;
-      } else {
-        toast.error(result.error);
+        if (result.success) {
+          // إفراغ السلة قبل التحويل
+          clearCart();
+          // إعادة التوجيه لصفحة Stripe
+          window.location.href = result.data.url;
+        } else {
+          toast.error(result.error);
+          setProcessingCard(false);
+        }
+      } catch (error) {
+        console.error("Payment error:", error);
+        toast.error("فشل في إنشاء جلسة الدفع");
         setProcessingCard(false);
       }
     } else {
-      // الدفع عند الاستلام (الكود القديم)
+      // الدفع عند الاستلام
       setLoading(true);
 
       try {
@@ -139,15 +147,34 @@ const Checkout = () => {
           customerNotes: formData.customerNotes,
         };
 
+        console.log("📦 Sending order:", orderData);
+
         const response = await API.post("/orders", orderData);
+
+        console.log("✅ Order response:", response.data);
 
         if (response.data.success) {
           toast.success("تم إنشاء الطلب بنجاح! 🎉");
+
+          // إفراغ السلة
           clearCart();
+
+          // التوجيه لصفحة التتبع
           navigate(`/store/${storeId}/orders/${response.data.data._id}`);
+        } else {
+          toast.error(response.data.message || "فشل في إنشاء الطلب");
         }
       } catch (error) {
-        toast.error(error.response?.data?.message || "فشل في إنشاء الطلب");
+        console.error("❌ Order creation error:", error);
+
+        // التحقق من نوع الخطأ
+        if (error.response?.data?.message) {
+          toast.error(error.response.data.message);
+        } else if (error.response?.status === 500) {
+          toast.error("خطأ في الخادم. يرجى المحاولة مرة أخرى.");
+        } else {
+          toast.error("فشل في إنشاء الطلب");
+        }
       } finally {
         setLoading(false);
       }
