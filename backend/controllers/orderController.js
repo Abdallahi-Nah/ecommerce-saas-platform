@@ -14,17 +14,18 @@ exports.createOrder = async (req, res) => {
     const { storeId, items, shippingAddress, paymentMethod, customerNotes } =
       req.body;
 
+    console.log("📦 Creating order:", {
+      storeId,
+      itemsCount: items?.length,
+      customerId: req.user?._id,
+      paymentMethod,
+    });
+
+    // Validation
     if (!items || items.length === 0) {
       return res.status(400).json({
         success: false,
         message: "يجب إضافة منتجات للطلب",
-      });
-    }
-
-    if (!storeId) {
-      return res.status(400).json({
-        success: false,
-        message: "معرف المتجر مطلوب",
       });
     }
 
@@ -49,7 +50,8 @@ exports.createOrder = async (req, res) => {
         });
       }
 
-      subtotal += product.price * item.quantity;
+      const itemTotal = product.price * item.quantity;
+      subtotal += itemTotal;
 
       orderItems.push({
         productId: product._id,
@@ -69,51 +71,69 @@ exports.createOrder = async (req, res) => {
 
     const shippingCost = 0;
     const tax = 0;
-    const total = subtotal + shippingCost + tax;
-
-    // توليد رقم الطلب يدوياً
-    const orderCount = await Order.countDocuments();
-    const orderNumber = `ORD-${Date.now()}-${orderCount + 1}`;
+    const discount = 0;
+    const total = subtotal + shippingCost + tax - discount;
 
     // إنشاء الطلب
     const order = await Order.create({
-      orderNumber, // ← أضف هذا
       customerId: req.user._id,
       storeId: storeId,
       items: orderItems,
       subtotal,
       shippingCost,
       tax,
+      discount,
       total,
       shippingAddress,
       paymentMethod: paymentMethod || "cash",
+      paymentStatus: "pending",
       customerNotes,
+      orderNumber: `ORD-${Date.now()}-${await Order.countDocuments()}`,
     });
+
+    console.log("✅ Order created successfully:", order._id);
 
     // تحديث إحصائيات المتجر
-    await Store.findByIdAndUpdate(storeId, {
-      $inc: {
-        "stats.totalOrders": 1,
-        "stats.totalRevenue": total,
-      },
-    });
+    try {
+      await Store.findByIdAndUpdate(storeId, {
+        $inc: {
+          "stats.totalOrders": 1,
+          "stats.totalRevenue": total,
+        },
+      });
+    } catch (statsError) {
+      console.error("⚠️ Stats update error:", statsError);
+      // لا نوقف العملية
+    }
 
-    // إرسال إيميل تأكيد الطلب
-    sendOrderConfirmationEmail(order, req.user, store).catch((err) =>
-      console.error("Order confirmation email error:", err)
-    );
+    // إرسال إيميل تأكيد (بدون انتظار)
+    try {
+      const store = await Store.findById(storeId);
+      if (store) {
+        const {
+          sendOrderConfirmationEmail,
+        } = require("../services/emailService");
+        sendOrderConfirmationEmail(order, req.user, store).catch((err) =>
+          console.error("Email error:", err)
+        );
+      }
+    } catch (emailError) {
+      console.error("⚠️ Email service error:", emailError);
+      // لا نوقف العملية
+    }
 
+    // إرجاع النتيجة للمستخدم فوراً
     res.status(201).json({
       success: true,
       message: "تم إنشاء الطلب بنجاح",
       data: order,
     });
   } catch (error) {
-    console.error('Create Order Error:', error);
+    console.error("❌ Create Order Error:", error);
     res.status(500).json({
       success: false,
-      message: 'خطأ في إنشاء الطلب',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined,
+      message: "خطأ في إنشاء الطلب",
+      error: process.env.NODE_ENV === "development" ? error.message : undefined,
     });
   }
 };
