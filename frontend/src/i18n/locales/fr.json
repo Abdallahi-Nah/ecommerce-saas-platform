@@ -82,6 +82,7 @@
     "inactive": "Inactif"
   },
   "products": {
+    "viewAll":"Voir Tout",
     "all": "Tout",
     "title": "Produits",
     "manage": "Gérer les produits de votre boutique",
