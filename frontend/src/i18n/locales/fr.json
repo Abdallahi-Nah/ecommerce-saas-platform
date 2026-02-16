@@ -55,6 +55,7 @@
     "serverError": "Erreur serveur, veuillez réessayer"
   },
   "dashboard": {
+    "currency":"€",
     "welcome": "Bienvenue",
     "overview": "Voici un aperçu de votre boutique aujourd'hui",
     "stats": {
@@ -81,6 +82,7 @@
     "inactive": "Inactif"
   },
   "products": {
+    "all": "Tout",
     "title": "Produits",
     "manage": "Gérer les produits de votre boutique",
     "addProduct": "Ajouter Produit",

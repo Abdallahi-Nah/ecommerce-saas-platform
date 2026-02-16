@@ -55,6 +55,7 @@
     "serverError": "Server error, please try again"
   },
   "dashboard": {
+    "currency": "$",
     "welcome": "Welcome",
     "overview": "Here's an overview of your store today",
     "stats": {
@@ -81,6 +82,7 @@
     "inactive": "Inactive"
   },
   "products": {
+    "all": "All",
     "title": "Products",
     "manage": "Manage your store products",
     "addProduct": "Add Product",
