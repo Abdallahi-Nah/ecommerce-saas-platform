@@ -12,6 +12,7 @@ import {
   Image as ImageIcon,
   Save,
   Upload,
+  Loader,
 } from "lucide-react";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
