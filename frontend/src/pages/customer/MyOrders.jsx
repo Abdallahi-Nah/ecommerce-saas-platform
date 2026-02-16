@@ -285,9 +285,10 @@ const MyOrders = () => {
               return (
                 <div
                   key={order._id}
-                  onClick={() =>
-                    navigate(`/store/${order.storeId._id}/orders/${order._id}`)
-                  }
+                  onClick={() => {
+                    const storeId = order.storeId?._id || order.storeId;
+                    navigate(`/store/${storeId}/orders/${order._id}`);
+                  }}
                   className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6 cursor-pointer group"
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
